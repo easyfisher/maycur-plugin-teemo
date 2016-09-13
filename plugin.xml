@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.maycur.com/mobile/plugins/1.0"
+        id="maycur-plugin-teemo" version="1.0.0">
+    <name>Teemo</name>
+    <description>Maycur Plugin Teemo</description>
+    <license>Maycur</license>
+    <keywords>maycur, teemo</keywords>
+
+    <js-module src="www/Teemo.js" name="Teemo">
+        <clobbers target="maycur.teemo" />
+    </js-module>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Teemo">
+                <param name="ios-package" value="MCTeemo"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/MCTeemo.h" />
+        <source-file src="src/ios/MCTeemo.m" />
+    </platform>
+</plugin>
